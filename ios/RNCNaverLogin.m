@@ -1,7 +1,7 @@
 
-#import "RNCcsNaverLogin.h"
+#import "RNCNaverLogin.h"
 
-@implementation RNCcsNaverLogin
+@implementation RNCNaverLogin
 
 - (dispatch_queue_t)methodQueue
 {

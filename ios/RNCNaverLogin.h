@@ -5,7 +5,7 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
-@interface RNCcsNaverLogin : NSObject <RCTBridgeModule>
+@interface RNCNaverLogin : NSObject <RCTBridgeModule>
 
 @end
   
