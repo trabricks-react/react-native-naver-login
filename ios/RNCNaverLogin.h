@@ -5,7 +5,20 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
-@interface RNCNaverLogin : NSObject <RCTBridgeModule>
+#import <NaverThirdPartyLogin/NaverThirdPartyLogin.h>
+
+@interface RNCNaverLogin : NSObject <RCTBridgeModule, NaverThirdPartyLoginConnectionDelegate> {
+    
+    NaverThirdPartyLoginConnection *_thirdPartyLoginConn;
+    
+    RCTPromiseResolveBlock _resolve;
+    RCTPromiseRejectBlock _reject;
+    
+    BOOL _afterlogin;
+    
+}
+
++ (BOOL)isLoginCallback:(NSURL *)url;
 
 @end
   

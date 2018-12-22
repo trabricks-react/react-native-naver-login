@@ -9,7 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, TouchableOpacity, ActivityIndicator} from 'react-native';
 
-import KakaoSDK from 'react-native-ccs-kakaosdk';
+import NaverLogin from 'react-native-ccs-naver-login';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -25,7 +25,7 @@ export default class App extends Component<Props> {
 	login() {
 		this.setState({ loading: true });
 
-		KakaoSDK.login().then((response) => {
+		NaverLogin.login().then((response) => {
 			console.log(response);
 			this.setState({ loading: false });
 		}).catch(e => {
@@ -37,7 +37,7 @@ export default class App extends Component<Props> {
 	async logout() {
 		this.setState({ loading: true });
 
-		KakaoSDK.logout().then((response) => {
+		NaverLogin.logout().then((response) => {
 			console.log(response);
 			this.setState({ loading: false });
 		}).catch(e => {
@@ -49,13 +49,12 @@ export default class App extends Component<Props> {
 	async getToken() {
 		this.setState({ loading: true });
 
-		KakaoSDK.getAccessToken().then(token => {
+		NaverLogin.getAccessToken().then(token => {
 			alert(JSON.stringify(token));
 			this.setState({ loading: false });
 		}).catch(e => {
 			console.log(e);
 			this.setState({ loading: false });
-
 		});
 	}
 		

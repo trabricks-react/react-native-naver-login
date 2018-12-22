@@ -1,6 +1,6 @@
 
 import { NativeModules } from 'react-native';
 
-const { RNCcsNaverLogin } = NativeModules;
+const { RNCNaverLogin } = NativeModules;
 
-export default RNCcsNaverLogin;
+export default RNCNaverLogin;
