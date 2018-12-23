@@ -1,5 +1,5 @@
 
-# react-native-ccs-naver-login
+# React Native Naver Login (네이버 아이디로 로그인 / 네아로)
 
 ## Getting started
 
@@ -33,21 +33,17 @@
   	```
       compile project(':react-native-ccs-naver-login')
   	```
-
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNCcsNaverLogin.sln` in `node_modules/react-native-ccs-naver-login/windows/RNCcsNaverLogin.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Ccs.Naver.Login.RNCcsNaverLogin;` to the usings at the top of the file
-  - Add `new RNCcsNaverLoginPackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
-
+    
 ## Usage
 ```javascript
-import RNCcsNaverLogin from 'react-native-ccs-naver-login';
+import NaverLogin from 'react-native-ccs-naver-login';
 
 // TODO: What to do with the module?
-RNCcsNaverLogin;
+NaverLogin.login()
+  .then(res => {
+    alert("Signed Successful\n" + res.accessToken);
+  }).catch(e => {
+    alert("Signed Failure");
+  });
 ```
   
