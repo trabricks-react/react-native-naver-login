@@ -1,20 +1,19 @@
 
 package cc.creamcookie.rn.naver.login;
 
-import android.app.Activity;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.WritableMap;
 import com.nhn.android.naverlogin.OAuthLogin;
 import com.nhn.android.naverlogin.OAuthLoginHandler;
-
-import org.json.JSONObject;
 
 public class RNCNaverLoginModule extends ReactContextBaseJavaModule {
 
@@ -119,11 +118,11 @@ public class RNCNaverLoginModule extends ReactContextBaseJavaModule {
 
             if (accessToken == null) throw new Exception("Required login..");
 
-            JSONObject o = new JSONObject();
-            o.put("accessToken", accessToken);
-            o.put("expireAt", expiresAt);
+            WritableMap map = Arguments.createMap();
+            map.putString("accessToken", accessToken);
+            map.putDouble("expireAt", expiresAt / 1000.0f);
 
-            promise.resolve(o.toString());
+            promise.resolve(map);
         }
         catch (Exception ex) {
             ex.printStackTrace();
