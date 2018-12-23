@@ -8,7 +8,9 @@
 node_modules/
 npm-debug.log
 yarn-error.log
-  
+
+android/.project
+android/.settings  
 
 # Xcode
 #
