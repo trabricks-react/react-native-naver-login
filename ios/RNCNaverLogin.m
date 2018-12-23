@@ -30,17 +30,15 @@
 - (BOOL)isLogin
 {
     [self initThirdParty];
-    return NO != [_thirdPartyLoginConn isValidAccessTokenExpireTimeNow];
+    return NO != [[NaverThirdPartyLoginConnection getSharedInstance] isValidAccessTokenExpireTimeNow];
 }
 
 - (NSDictionary *)getAccessToken
 {
-    [self initThirdParty];
     if ([self isLogin]) {
         NSDictionary * result = @{ @"accessToken": _thirdPartyLoginConn.accessToken,
                                    @"expireAt": _thirdPartyLoginConn.accessTokenExpireDate
                                    };
-
         return result;
     }
     else {
@@ -114,8 +112,11 @@ RCT_REMAP_METHOD(logout,
 
 
 - (void)oauth20ConnectionDidFinishRequestACTokenWithAuthCode {
-    if (_resolve) {
-        _resolve([self getAccessToken]);
+    
+    NSDictionary* accessToken = [self getAccessToken];
+    if (_resolve && accessToken != nil) {
+        _resolve(accessToken);
+        NSLog(@"RN Sent");
         _reject = nil;
         _resolve = nil;
         _afterlogin = NO;
@@ -125,8 +126,11 @@ RCT_REMAP_METHOD(logout,
 
 
 - (void)oauth20ConnectionDidFinishRequestACTokenWithRefreshToken {
-    if (_resolve) {
-        _resolve([self getAccessToken]);
+
+    NSDictionary* accessToken = [self getAccessToken];
+    if (_resolve && accessToken != nil) {
+        _resolve(accessToken);
+        NSLog(@"RN Sent");
         _reject = nil;
         _resolve = nil;
         _afterlogin = NO;
@@ -141,6 +145,7 @@ RCT_REMAP_METHOD(logout,
     }
     else if (_resolve) {
         _resolve(@"SUCCESS");
+        NSLog(@"RN Sent Delete.");
         _reject = nil;
         _resolve = nil;
         _afterlogin = NO;
@@ -170,8 +175,9 @@ RCT_REMAP_METHOD(logout,
 
 - (void)oauth20Connection:(NaverThirdPartyLoginConnection *)oauthConnection didFinishAuthorizationWithResult:(THIRDPARTYLOGIN_RECEIVE_TYPE)recieveType
 {
-    if (_resolve) {
-        _resolve([self getAccessToken]);
+    NSDictionary* accessToken = [self getAccessToken];
+    if (_resolve && accessToken != nil) {
+        _resolve(accessToken);
         _reject = nil;
         _resolve = nil;
         _afterlogin = NO;
