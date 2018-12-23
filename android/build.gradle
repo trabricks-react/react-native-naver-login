@@ -28,9 +28,13 @@ android {
 
 repositories {
     mavenCentral()
+    flatDir {
+        dirs 'src/main/lib'
+    }
 }
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
+    compile ('com.naver.nid:naveridlogin-android-sdk:4.2.4')
 }
   

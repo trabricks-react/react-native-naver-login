@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example">
+    package="com.nhn.android.oauth.test">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
@@ -21,6 +21,10 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+
+        <meta-data android:name="com.naver.sdk.ClientId" android:value="@string/naver_client_id" />
+        <meta-data android:name="com.naver.sdk.ClientSecret" android:value="@string/naver_client_secret" />
+
     </application>
 
 </manifest>
