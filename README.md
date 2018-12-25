@@ -1,5 +1,12 @@
 
-# React Native Naver Login (네이버 아이디로 로그인 / 네아로)
+# Naver Login For React Native  (네이버 아이디로 로그인 / 네아로)
+
+![platforms](https://img.shields.io/badge/platforms-Android%20%7C%20iOS-brightgreen.svg?style=flat-square&colorB=191A17)
+[![npm](https://img.shields.io/npm/v/react-native-ccs-naver-login.svg?style=flat-square)](https://www.npmjs.com/package/react-native-ccs-naver-login)
+[![npm](https://img.shields.io/npm/dm/react-native-ccs-naver-login.svg?style=flat-square&colorB=007ec6)](https://www.npmjs.com/package/react-native-ccs-naver-login)
+[![github issues](https://img.shields.io/github/issues/creamcookie/react-native-naver-login.svg?style=flat-square)](https://github.com/creamcookie/react-native-naver-login/issues)
+[![github closed issues](https://img.shields.io/github/issues-closed/creamcookie/react-native-naver-login.svg?style=flat-square&colorB=44cc11)](https://github.com/creamcookie/react-native-naver-login/issues?q=is%3Aissue+is%3Aclosed)
+[![Issue Stats](https://img.shields.io/issuestats/i/github/creamcookie/react-native-naver-login.svg?style=flat-square&colorB=44cc11)](http://github.com/creamcookie/react-native-naver-login/issues)
 
 ## Getting started
 
@@ -34,6 +41,17 @@
       compile project(':react-native-ccs-naver-login')
   	```
     
+
+### Initalizing project
+
+
+#### iOS
+
+
+#### Android
+
+
+
 ## Usage
 ```javascript
 import NaverLogin from 'react-native-ccs-naver-login';
