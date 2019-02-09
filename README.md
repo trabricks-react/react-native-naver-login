@@ -73,6 +73,11 @@
 2. 
 
 
+사용방법은 
+https://github.com/creamcookie/react-native-naver-login
+안에 example프로젝트를 참고하시면됩니다.
+
+
 ## 기본 사용방법
 ```javascript
 import NaverLogin from 'react-native-ccs-naver-login';
