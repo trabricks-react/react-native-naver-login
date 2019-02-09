@@ -22,15 +22,15 @@
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-ccs-naver-login` and add `RNCcsNaverLogin.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNCcsNaverLogin.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
+2. Go to `node_modules` ➜ `react-native-ccs-naver-login` and add `RNCNaverLogin.xcodeproj`
+3. In XCode, in the project navigator, select your project. Add `libRNCNaverLogin.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
 #### Android
 
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.RNCcsNaverLoginPackage;` to the imports at the top of the file
-  - Add `new RNCcsNaverLoginPackage()` to the list returned by the `getPackages()` method
+  - Add `import cc.creamcookie.rn.naver.login.RNCNaverLoginPackage;` to the imports at the top of the file
+  - Add `new RNCNaverLoginPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
   	include ':react-native-ccs-naver-login'
