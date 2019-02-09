@@ -8,16 +8,16 @@
 [![github closed issues](https://img.shields.io/github/issues-closed/creamcookie/react-native-naver-login.svg?style=flat-square&colorB=44cc11)](https://github.com/creamcookie/react-native-naver-login/issues?q=is%3Aissue+is%3Aclosed)
 [![Issue Stats](https://img.shields.io/issuestats/i/github/creamcookie/react-native-naver-login.svg?style=flat-square&colorB=44cc11)](http://github.com/creamcookie/react-native-naver-login/issues)
 
-## Getting started
+## 시작하기
 
 `$ npm install react-native-ccs-naver-login --save`
 
-### Mostly automatic installation
+### 자동설치
 
 `$ react-native link react-native-ccs-naver-login`
 
-### Manual installation
 
+### 수동설치
 
 #### iOS
 
@@ -42,21 +42,34 @@
   	```
     
 
-### Initalizing project
-
+### 설치 후 부가 작업 (필수)
 
 #### iOS (Without Cocoapods)
 
-
+1. Download to SDK (NaverThirdPartyLogin.framework)
+   https://github.com/naver/naveridlogin-sdk-ios
+2. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
+3. import a NaverThirdPartyLogin.framework
 
 #### iOS (With Cocoapods)
+
+1. Nothing.
+
+#### Android
+
+1. Nothing.
+
+
+### 키 설정 등 작업
+
+#### iOS
 
 
 #### Android
 
 
 
-## Usage
+## 기본 사용방법
 ```javascript
 import NaverLogin from 'react-native-ccs-naver-login';
 
