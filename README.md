@@ -82,12 +82,24 @@ https://github.com/creamcookie/react-native-naver-login
 ```javascript
 import NaverLogin from 'react-native-ccs-naver-login';
 
-// TODO: What to do with the module?
+// TODO: 로그인처리 (이미 로그인되어있어도 창 강제로 띠웁니다)
 NaverLogin.login()
   .then(res => {
     alert("Signed Successful\n" + res.accessToken);
   }).catch(e => {
     alert("Signed Failure");
   });
+  
+// TODO: 로그아웃처리 
+NaverLogin.logout();
+
+// TODO: 토큰가져오기 (로그인안되어있음 안가져옴)
+NaverLogin.getAccessToken()
+  .then(res => {
+    alert("Signed Successful\n" + res.accessToken);
+  }).catch(e => {
+    alert("Signed Failure");
+  });
+
 ```
   
