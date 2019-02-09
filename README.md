@@ -45,7 +45,11 @@
 ### Initalizing project
 
 
-#### iOS
+#### iOS (Without Cocoapods)
+
+
+
+#### iOS (With Cocoapods)
 
 
 #### Android
