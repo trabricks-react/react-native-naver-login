@@ -42,6 +42,7 @@
   	```
     
 
+
 ### 설치 후 부가 작업 (필수)
 
 #### iOS (Without Cocoapods)
@@ -60,13 +61,16 @@
 1. Nothing.
 
 
+
 ### 키 설정 등 작업
 
 #### iOS
-
+1. Open a Info.plist
+2. 
 
 #### Android
-
+1. Open a AndroidManifest.xml
+2. 
 
 
 ## 기본 사용방법
