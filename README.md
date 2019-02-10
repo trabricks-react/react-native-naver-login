@@ -54,7 +54,15 @@
 
 #### iOS (With Cocoapods)
 
-1. Nothing.
+***** When not working
+Add these pods in your Podfile and then install.
+
+pod 'React', :path => '../node_modules/react-native', :subspecs => [ 'Core', 'CxxBridge', 'DevSupport', 'RCTText', 'RCTNetwork', 'RCTWebSocket', 'RCTAnimation', 'RCTImage', 'RCTLinkingIOS', ]
+pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+pod 'react-native-ccs-naver-login', :path => '../node_modules/react-native-ccs-naver-login'
 
 #### Android
 
@@ -65,12 +73,26 @@
 ### 키 설정 등 작업
 
 #### iOS
-1. Open a Info.plist
-2. 
+1. Open Info.plist and add your Naver Application information.
+
+<key>NAVER_CLIENT_ID</key>
+<string>YOUR_ID</string>
+<key>NAVER_CLIENT_SECRET</key>
+<string>YOUR_SECRET</string>
+<key>NAVER_USE_SCHEMES</key>
+<string>YOUR_SCHEME</string>
+
+2. Add the URL Scheme in URL Types of Info tab.
 
 #### Android
-1. Open a AndroidManifest.xml
-2. 
+1. Open AndroidManifest.xml
+2. Add your Naver ID and Secret Key inside of the <application> tag
+  
+<application
+...
+  <meta-data android:name="com.naver.sdk.ClientId" android:value="YOUR_KEY"/> 
+  <meta-data android:name="com.naver.sdk.ClientSecret" android:value="YOUR_KEY" /> 
+</application>
 
 
 사용방법은 
