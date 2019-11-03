@@ -1,5 +1,5 @@
 
-# Naver Login For React Native  (네이버 아이디로 로그인 / 네아로)
+# NaverSDK For React Native  (네아로, 까페, 블로그, 캘린더)
 
 ![platforms](https://img.shields.io/badge/platforms-Android%20%7C%20iOS-brightgreen.svg?style=flat-square&colorB=191A17)
 [![npm](https://img.shields.io/npm/v/react-native-ccs-naver-login.svg?style=flat-square)](https://www.npmjs.com/package/react-native-ccs-naver-login)
